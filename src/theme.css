@@ -1,0 +1,98 @@
+:root {
+  /* --- Typography --- */
+  --font-main: "Tiny5";
+
+  /* --- Foundation Colors (RGBA) --- */
+  --foundation-black: rgba(0, 0, 0, 1);
+  --foundation-white: rgba(255, 255, 255, 1);
+  --foundation-cyan: rgba(0, 255, 255, 1);
+  --foundation-red: rgba(255, 51, 51, 1);
+  --foundation-orange: rgba(255, 170, 0, 1);
+  --foundation-yellow: rgba(255, 255, 0, 1);
+  --foundation-pink: rgba(255, 0, 255, 1);
+
+  /* --- Semantic Theme Colors --- */
+
+  /* Sun Gradient */
+  --theme-sun-0: rgba(255, 204, 0, 1);
+  --theme-sun-50: rgba(255, 102, 0, 1);
+  --theme-sun-100: rgba(255, 0, 0, 1);
+
+  /* Primary Action / Focus */
+  --theme-primary: var(--foundation-cyan);
+  --theme-primary-glow: rgba(0, 255, 255, 0.4);
+  --theme-primary-dim: rgba(0, 255, 255, 0.2);
+  --theme-primary-soft: rgba(0, 255, 255, 0.05);
+  --theme-primary-bright-glow: rgba(0, 255, 255, 0.6);
+
+  /* Danger / Death / High Energy */
+  --theme-danger: var(--foundation-red);
+  --theme-danger-dim: rgba(255, 0, 0, 0.3);
+  --theme-danger-soft: rgba(255, 170, 170, 1);
+  --theme-danger-bg: rgba(30, 0, 0, 0.95);
+
+  /* Warning / Heat / Growth */
+  --theme-warning: var(--foundation-orange);
+  --theme-warning-dim: rgba(255, 170, 0, 0.2);
+
+  /* Highlights / Achievement */
+  --theme-highlight: var(--foundation-yellow);
+
+  /* Portals / Goals */
+  --theme-portal: var(--foundation-pink);
+  --theme-portal-glow: rgba(255, 0, 255, 0.6);
+
+  /* --- UI / Layout --- */
+  --bg-app: var(--foundation-black);
+  --bg-overlay: rgba(0, 0, 0, 0.85);
+  --bg-panel-dark: rgba(0, 0, 0, 0.5);
+
+  --text-main: var(--foundation-white);
+  --text-inverse: var(--foundation-black);
+
+  /* --- Effects --- */
+  --shadow-primary: 0 0 10px var(--theme-primary);
+  --shadow-primary-large: 0 0 15px var(--theme-primary-glow);
+  --shadow-button: 0 0 20px var(--theme-primary-bright-glow);
+  --shadow-warning: 0 0 10px var(--theme-warning);
+
+  /* --- Layout --- */
+  --border-radius-sm: 5px;
+  --border-radius-md: 8px;
+  --spacing-ls: 2px;
+  --spacing-inset: 20px;
+
+  /* --- Environment / Background --- */
+  --env-milky-way: rgba(224, 240, 255, 1);
+
+  /* Nebula Palette */
+  --env-nebula-1: rgba(102, 51, 221, 1);
+  --env-nebula-2: rgba(51, 102, 221, 1);
+  --env-nebula-3: rgba(221, 51, 102, 1);
+  --env-nebula-4: rgba(51, 221, 102, 1);
+  --env-nebula-5: rgba(221, 221, 51, 1);
+
+  /* Galaxy Palette */
+  --env-galaxy-1: rgba(255, 204, 170, 1);
+  --env-galaxy-2: rgba(204, 204, 255, 1);
+  --env-galaxy-3: rgba(170, 255, 255, 1);
+  --env-galaxy-4: rgba(255, 170, 170, 1);
+  --env-galaxy-5: rgba(255, 255, 255, 1);
+
+  /* --- Planet Palette --- */
+  --planet-1: rgba(51, 102, 255, 1);
+  --planet-2: rgba(255, 153, 51, 1);
+  --planet-3: rgba(51, 204, 51, 1);
+  --planet-4: rgba(204, 51, 255, 1);
+  --planet-5: rgba(255, 51, 102, 1);
+  --planet-6: rgba(255, 255, 0, 1);
+  --planet-7: rgba(0, 255, 255, 1);
+  --planet-8: rgba(255, 0, 255, 1);
+  --planet-9: rgba(204, 255, 0, 1);
+  --planet-10: rgba(0, 255, 136, 1);
+  --planet-11: rgba(255, 85, 0, 1);
+  --planet-12: rgba(85, 0, 255, 1);
+  --planet-13: rgba(0, 85, 255, 1);
+  --planet-14: rgba(255, 0, 85, 1);
+  --planet-15: rgba(85, 255, 0, 1);
+}

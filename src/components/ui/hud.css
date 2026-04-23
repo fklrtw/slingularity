@@ -1,0 +1,229 @@
+.hud-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  color: var(--theme-primary);
+  z-index: 9999;
+  font-size: min(1.2em, 3vw);
+}
+
+.hud-minimap-border {
+  position: absolute;
+  top: max(env(safe-area-inset-top), var(--spacing-inset));
+  right: max(env(safe-area-inset-right), var(--spacing-inset));
+  /* minimap height and width are set by JavaScript */
+  width: var(--minimap-width);
+  height: var(--minimap-height);
+  border: 2px solid var(--theme-primary);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-primary-large);
+  background: transparent;
+  z-index: 10000;
+}
+
+.hud-stats-container {
+  position: absolute;
+  top: max(env(safe-area-inset-top), var(--spacing-inset));
+  left: max(env(safe-area-inset-left), var(--spacing-inset));
+  pointer-events: none;
+}
+
+.hud-stats-table {
+  border-collapse: collapse;
+}
+
+.hud-stats-table td {
+  padding: 2px 6px;
+  vertical-align: baseline;
+}
+
+.hud-stats-table .hud-label {
+  text-align: right;
+  opacity: 0.8;
+}
+
+.hud-stats-table .hud-value {
+  text-align: left;
+  font-weight: bold;
+}
+
+.hud-common {
+  font-family: var(--font-main), sans-serif;
+  letter-spacing: var(--spacing-ls);
+  text-shadow: var(--shadow-primary);
+  text-transform: uppercase;
+}
+
+.hud-level-info {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.hud-planets-count {
+  opacity: 0.7;
+  vertical-align: middle;
+  margin-left: 1vw;
+}
+
+.hud-fps {
+  opacity: 0.5;
+  margin-top: 0.2vh;
+}
+
+.hud-score {
+  margin-top: 0.8vh;
+  color: var(--theme-highlight);
+}
+
+.hud-distance {
+  opacity: 0.6;
+  margin-top: 0.4vh;
+}
+
+.hud-gauge-group {
+  margin-top: 1.5vh;
+  width: min(180px, 40vw);
+}
+
+.hud-gauge-label {
+  margin-bottom: 0.4vh;
+}
+
+.hud-sun-label {
+  color: var(--theme-warning);
+}
+
+.hud-gauge-bg {
+  width: 100%;
+  height: 4px;
+  position: relative;
+}
+
+.hud-sun-gauge-bg {
+  background: var(--theme-warning-dim);
+}
+
+.hud-vel-gauge-bg {
+  background: var(--theme-primary-dim);
+}
+
+.hud-gauge-fill {
+  width: 0%;
+  height: 100%;
+  transition: width 0.1s ease-out;
+}
+
+.hud-sun-gauge-fill {
+  background: var(--theme-warning);
+  box-shadow: var(--shadow-warning);
+}
+
+.hud-vel-gauge-fill {
+  background: var(--theme-primary);
+  box-shadow: var(--shadow-primary);
+}
+
+.hud-ship-marker {
+  position: absolute;
+  left: 0%;
+  top: -4px;
+  bottom: -4px;
+  width: 2px;
+  background: var(--theme-primary);
+  box-shadow: 0 0 5px var(--theme-primary);
+  z-index: 2;
+  transition: left 0.1s ease-out;
+  display: none;
+}
+
+.hud-vel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.hud-vel-text {
+  opacity: 0.8;
+}
+
+.hud-controls-container {
+  position: absolute;
+  bottom: max(env(safe-area-inset-bottom), var(--spacing-inset));
+  left: max(env(safe-area-inset-left), var(--spacing-inset));
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hud-controls-container > * {
+  pointer-events: auto;
+}
+
+.hud-control-button {
+  background: var(--bg-panel-dark);
+  border: 1px solid var(--theme-primary);
+  color: var(--theme-primary);
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.hud-icon-button {
+  font-size: 1.8rem;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.hud-control-button:hover {
+  background: var(--theme-primary);
+  color: #000;
+}
+
+.hud-debug-container {
+  position: absolute;
+  bottom: calc(max(env(safe-area-inset-bottom), var(--spacing-inset)) + 1em);
+  right: max(env(safe-area-inset-right), var(--spacing-inset));
+  text-align: right;
+  pointer-events: none;
+}
+
+.hud-debug-content {
+  opacity: 0.8;
+  text-transform: none;
+  background: var(--bg-panel-dark);
+  padding: 10px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.7em;
+}
+
+.hud-disclaimer {
+  position: absolute;
+  bottom: max(env(safe-area-inset-bottom), var(--spacing-inset));
+  right: max(env(safe-area-inset-right), var(--spacing-inset));
+  text-align: right;
+  opacity: 0.5;
+  font-size: 0.6em;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hud-disclaimer-row {
+  line-height: 1.2;
+}
+
+.hud-link {
+  color: var(--theme-primary);
+  text-decoration: underline;
+  pointer-events: auto;
+}
+

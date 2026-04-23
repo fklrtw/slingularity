@@ -1,0 +1,114 @@
+.level-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  background: var(--bg-overlay);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.level-loading-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--theme-primary-dim);
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+  max-width: 500px;
+  width: 90%;
+}
+
+.level-loading-title {
+  font-family: var(--font-main), sans-serif;
+  font-size: 2rem;
+  color: var(--text-main);
+  text-shadow: var(--shadow-primary);
+  margin: 0 0 30px 0;
+  letter-spacing: var(--spacing-ls);
+  animation: pulse-title 1.5s ease-in-out infinite alternate;
+}
+
+.orbital-loader {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbital-loader-sun {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: var(--theme-warning);
+  border-radius: 50%;
+  box-shadow: var(--shadow-warning);
+}
+
+.orbital-loader-path {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 1px dashed var(--theme-primary-dim);
+  border-radius: 50%;
+}
+
+.orbital-loader-ship {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--theme-primary);
+  border-radius: 50%;
+  box-shadow: var(--shadow-primary);
+  animation: orbit-animation 1.8s linear infinite;
+}
+
+.level-loading-status {
+  font-family: var(--font-main), sans-serif;
+  font-size: 1.2rem;
+  color: var(--theme-primary);
+  text-shadow: var(--shadow-primary);
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.level-loading-tip {
+  font-family: var(--font-main), sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+  margin: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+  max-width: 400px;
+}
+
+/* Animations */
+@keyframes orbit-animation {
+  from {
+    transform: rotate(0deg) translateX(40px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(40px) rotate(-360deg);
+  }
+}
+
+@keyframes pulse-title {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+    text-shadow: 0 0 15px var(--theme-primary-bright-glow);
+  }
+}

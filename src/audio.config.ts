@@ -1,0 +1,43 @@
+export const AUDIO_CONFIG = {
+  MUSIC: {
+    SCALES: {
+      BASE: 'C:minor',
+      VICTORY: 'C:major',
+      ORBIT: 'Eb:major',
+      SKIP: 'G:major',
+    },
+    TEMPO: {
+      MIN_BPM: 60,
+      VELOCITY_DIVISOR: 8,
+    },
+  },
+  SFX: {
+    VOLUMES: {
+      LASER: 0.4,
+      CRASH_SNAP: 1.5,
+      CRASH_RUMBLE: 1.5,
+      CRASH_NOISE: 1.5,
+      PLANET_ANNIHILATION_NOISE: 0.8,
+      PLANET_ANNIHILATION_CLUSTER: 0.2,
+      PLANET_ANNIHILATION_SUB: 1.2,
+      COMET_ANNIHILATION_SWEEP: 0.15,
+      COMET_ANNIHILATION_NOISE: 0.5,
+      SUN_GULP_SEAR: 0.8,
+      SUN_GULP_VAPOR: 0.4,
+      SUN_GULP_THUD: 1.5,
+      LOW_ENERGY: 0.25,
+      PORTAL_EMERGE: 0.3,
+      PORTAL_ENTER: 0.3,
+      CELEBRATION_CHIME: 0.15,
+      GAME_OVER: 0.5,
+      UI_CLICK: 0.1,
+      START_MISSION: 0.05,
+      RESTART: 0.05,
+      DRAG_MAX: 0.2,
+      COMET_PROXIMITY_MAX: 0.08,
+      COMET_PROXIMITY_FACTOR: 800,
+      SUN_PROXIMITY_MAX: 0.15,
+      SUN_PROXIMITY_FACTOR: 2000,
+    },
+  },
+};

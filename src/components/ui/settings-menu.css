@@ -1,0 +1,239 @@
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20000;
+  backdrop-filter: blur(4px);
+}
+
+.settings-panel {
+  background: rgba(20, 20, 20, 0.95);
+  border: 2px solid var(--theme-primary);
+  padding: 2rem;
+  width: calc(100vw - 40px);
+  max-width: 500px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.3);
+  pointer-events: auto;
+  box-sizing: border-box;
+}
+
+.settings-panel h2 {
+  margin: 0 0 1.5rem 0;
+  color: var(--theme-primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+  padding-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .settings-panel {
+    padding: 1.25rem;
+    width: calc(100vw - 20px);
+  }
+
+  .settings-panel h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .setting-group-title {
+    font-size: 0.7rem;
+  }
+
+  .setting-title {
+    font-size: 0.85rem;
+  }
+
+  .setting-desc {
+    font-size: 0.6rem;
+  }
+
+  .setting-dropdown {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .setting-row {
+    gap: 1rem;
+  }
+
+  .settings-close {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
+
+.settings-content {
+  overflow-y: auto;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--theme-primary) transparent;
+}
+
+.settings-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.settings-content::-webkit-scrollbar-thumb {
+  background: var(--theme-primary);
+}
+
+.settings-content a {
+  color: var(--theme-highlight);
+  text-decoration: none;
+}
+
+.settings-content a:hover {
+  text-decoration: underline;
+}
+
+.setting-group-title {
+  color: var(--theme-primary);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+  border-left: 2px solid var(--theme-primary);
+  padding-left: 0.5rem;
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  min-height: 3.5rem;
+}
+
+.setting-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.setting-control {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  min-width: 140px;
+}
+
+.setting-title {
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.setting-desc {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.7rem;
+}
+
+.setting-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.volume-slider-container {
+  width: 100%;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-top: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.volume-slider-container input[type="range"] {
+  flex: 1;
+  cursor: pointer;
+  accent-color: var(--theme-primary);
+  height: 4px;
+}
+
+.volume-percentage {
+  width: 45px;
+  text-align: right;
+  color: var(--theme-primary);
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.setting-control input {
+  cursor: pointer;
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: var(--theme-primary);
+  margin: 0;
+}
+
+.setting-dropdown {
+  background: var(--bg-panel-dark);
+  border: 1px solid var(--theme-primary);
+  color: var(--text-main);
+  padding: 0.4rem 0.6rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 2.2rem;
+  text-align: center;
+  text-align-last: center;
+}
+
+.setting-dropdown:hover {
+  background: rgba(60, 60, 60, 0.9);
+  border-color: var(--theme-highlight);
+}
+
+.setting-dropdown option {
+  background: var(--bg-app);
+  color: var(--text-main);
+}
+
+.settings-close {
+  margin-top: 1rem;
+  background: transparent;
+  border: 1px solid var(--theme-primary);
+  color: var(--theme-primary);
+  padding: 0.8rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.settings-close:hover {
+  background: var(--theme-primary);
+  color: #000;
+}

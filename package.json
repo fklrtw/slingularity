@@ -1,0 +1,63 @@
+{
+  "authors": [
+    "fklrtw <275729229+fklrtw@users.noreply.github.com>",
+    "Gemini (Google AI)",
+    "Google Antigravity (Google DeepMind)"
+  ],
+  "dependencies": {
+    "@fontsource/material-symbols-outlined": "^5.3.9",
+    "@fontsource/tiny5": "5.3.0",
+    "@kabelsalat/web": "0.4.1",
+    "@react-three/drei": "10.7.9",
+    "@react-three/fiber": "9.8.2",
+    "@react-three/postprocessing": "3.2.2",
+    "@strudel/core": "1.2.6",
+    "@strudel/web": "1.3.0",
+    "bignumber.js": "11.1.5",
+    "chroma-js": "3.3.0",
+    "postprocessing": "6.39.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.187.0",
+    "zustand": "5.1.0"
+  },
+  "description": "A 3D browser-based gravity slingshot simulator exploring orbital mechanics through a capture-and-release mechanic.",
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@stylistic/eslint-plugin": "6.0.1",
+    "@testing-library/jest-dom": "7.0.1",
+    "@testing-library/react": "16.3.3",
+    "@types/chroma-js": "3.1.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.187.0",
+    "@typescript-eslint/eslint-plugin": "8.73.0",
+    "@typescript-eslint/parser": "8.73.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "@vitest/coverage-v8": "5.1.0",
+    "@vitest/ui": "5.1.0",
+    "eslint": "10.15.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "jsdom": "31.0.1",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.73.0",
+    "vite": "8.3.8",
+    "vitest": "5.1.0"
+  },
+  "homepage": "https://fklrtw.github.io/slingularity/",
+  "license": "MIT",
+  "name": "@fklrtw/slingularity",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fklrtw/slingularity.git"
+  },
+  "scripts": {
+    "build": "vite build",
+    "coverage": "vitest run --coverage",
+    "dev": "vite",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "type": "module",
+  "version": "0.0.0"
+}
