@@ -51,13 +51,13 @@ jobs:
         run: mkdir -p dist/coverage && mv coverage/* dist/coverage/
 
       - name: Setup Pages
-        uses: actions/configure-pages@1fb3643d0f0ee1629860608a2880479f2489fbd9 # v5.0.0
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@4803e4946307f08c3c432729a8a729e2898c634c # v3.0.2
+        uses: actions/upload-pages-artifact@56afc609e7421ac297b833211516f272a2656cb6 # v3
         with:
           path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0fedffea45c1f0e # v4.0.5
+        uses: actions/deploy-pages@v4
