@@ -51,10 +51,10 @@ jobs:
         run: mkdir -p dist/coverage && mv coverage/* dist/coverage/
 
       - name: Setup Pages
-        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@56afc609e7421ac297b833211516f272a2656cb6 # v3
+        uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
 
